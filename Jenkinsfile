@@ -12,14 +12,14 @@ pipeline {
       steps {
         script {
           def image = "mariner-web:${env.BUILD_NUMBER}"
-          sh "docker build -t ${image} ."
+          bat "docker build -t ${image} ."
         }
       }
     }
 
-    stage('Remove Previous Container') {
+    stage('Remove Old Container') {
       steps {
-        sh "docker rm -f mariner-web || true"
+        bat "docker rm -f mariner-web || exit 0"
       }
     }
 
@@ -27,7 +27,7 @@ pipeline {
       steps {
         script {
           def image = "mariner-web:${env.BUILD_NUMBER}"
-          sh "docker run -d --name mariner-web -p 9090:80 ${image}"
+          bat "docker run -d --name mariner-web -p 9090:80 ${image}"
         }
       }
     }

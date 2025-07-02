@@ -1,0 +1,1443 @@
+See 'snap info <snapname>' for additional versions.
+mariner@yatchuatpR1WGZ6:~$ ls
+ DB.zip                                 UAT1-27-06-2025.zip   browsernew.zip
+'Mariner_v1.0.0_50_UAT_Azure (1).apk'   browser_28.zip        wwwroot
+ Migrations                             browser_28_1.zip
+mariner@yatchuatpR1WGZ6:~$ cd   browsernew.zip
+-bash: cd: browsernew.zip: Not a directory
+mariner@yatchuatpR1WGZ6:~$ cd C:\Users\cydez\Downloads\devOPs\browser
+-bash: cd: C:UserscydezDownloadsdevOPsbrowser: No such file or directory
+mariner@yatchuatpR1WGZ6:~$ cdC:\Users\cydez\Downloads\devOPs\browser
+cdC:UserscydezDownloadsdevOPsbrowser: command not found
+mariner@yatchuatpR1WGZ6:~$ pwd
+/home/mariner
+mariner@yatchuatpR1WGZ6:~$ ls -ltr
+total 263308
+-rw-rw-r-- 1 mariner mariner  1056688 May 30 15:21  DB.zip
+drwxr-xr-x 2 mariner mariner     4096 May 31 13:15  Migrations
+-rw-rw-r-- 1 mariner mariner 40528310 Jun  3 11:06 'Mariner_v1.0.0_50_UAT_Azure                                                                                                              (1).apk'
+drwxr-xr-x 3 root    root        4096 Jun 10 08:56  wwwroot
+-rw-rw-r-- 1 mariner mariner 57002474 Jun 27 04:30  UAT1-27-06-2025.zip
+-rw-rw-r-- 1 mariner mariner 57005720 Jun 28 05:15  browser_28_1.zip
+-rw-rw-r-- 1 mariner mariner 57005720 Jun 28 05:15  browser_28.zip
+-rw-rw-r-- 1 mariner mariner 57005708 Jun 28 09:42  browsernew.zip
+mariner@yatchuatpR1WGZ6:~$ cd /var/www/
+mariner@yatchuatpR1WGZ6:/var/www$ ls -ltr
+total 378740
+-rw-r--r--  1 mariner  mariner  274913280 May 30 13:46 Mariner.tar
+-rw-r--r--  1 mariner  mariner  112865280 May 30 13:47 BaseApi.tar
+drwxr-xr-x  2 root     root          4096 May 30 13:53 html
+drwxr-xr-x  5 root     root          4096 May 31 12:29 old_code
+drwxr-xr-x  4 root     root          4096 Jun 19 07:36 tripify-server
+drwxr-xr-x 12 www-data www-data      4096 Jun 19 07:37 builds
+drwxr-xr-x 10 www-data www-data      4096 Jun 20 05:03 Mariner
+drwxr-xr-x  4 root     root          4096 Jun 24 13:19 MarinerWeb_June24
+drwxr-xr-x  6 www-data www-data      4096 Jun 24 13:28 tripifyWeb
+drwxr-xr-x  9 www-data www-data      4096 Jun 25 16:17 BaseApi
+drwxr-xr-x  3 root     root          4096 Jun 25 16:18 test
+drwxr-xr-x  4 root     root          4096 Jun 28 05:41 MarinerWeb_June28
+drwxr-xr-x  4 root     root          4096 Jun 28 07:16 MarinerWeb_June28_1
+drwxrwxrwx  4 www-data www-data      4096 Jun 28 07:21 MarinerWeb
+mariner@yatchuatpR1WGZ6:/var/www$ cp -r MarinerWeb MarinerWeb_June28_2
+cp: cannot create directory 'MarinerWeb_June28_2': Permission denied
+mariner@yatchuatpR1WGZ6:/var/www$ sudo -s
+root@yatchuatpR1WGZ6:/var/www# tail -f /var/www/builds/Mariner/logs/webapi-20250                                                                                                             628.log^C
+root@yatchuatpR1WGZ6:/var/www# ^C
+root@yatchuatpR1WGZ6:/var/www# ^C
+root@yatchuatpR1WGZ6:/var/www# ^C
+root@yatchuatpR1WGZ6:/var/www# ^C
+root@yatchuatpR1WGZ6:/var/www# cd MarinerWeb
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ls
+assets             chunk-BVLEDUP7.js  chunk-X3MJIZCU.js  polyfills-FFHMD2TL.js
+chunk-33KUHHLE.js  chunk-CJZPMEIU.js  chunk-YSHTC3YG.js  scripts-EEEIPNC3.js
+chunk-442KA2ER.js  chunk-F4DQ3BH6.js  favicon.ico        styles-D5EBWVXX.css
+chunk-77EH6ROJ.js  chunk-MX64MWKJ.js  index.html
+chunk-7Z673NVA.js  chunk-PWFIESBA.js  main-W4CBR5QH.js
+chunk-AYWO7N2Q.js  chunk-VYLNYDR5.js  media
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# rm -rf *
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ls
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ls -a
+.  ..  .htaccess
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# cp /home/mariner/browsernew.zip .
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ls
+browsernew.zip
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# unzip browsernew.zip
+Archive:  browsernew.zip
+   creating: browser/
+   creating: browser/assets/
+   creating: browser/assets/constants/
+  inflating: browser/assets/constants/card-types.constants.ts
+  inflating: browser/assets/constants/common-utils.ts
+  inflating: browser/assets/constants/countries.ts
+  inflating: browser/assets/constants/roles.json
+  inflating: browser/assets/constants/salary-type.enum.ts
+  inflating: browser/assets/constants/status-list.ts
+   creating: browser/assets/img/
+  inflating: browser/assets/img/ameriacan.png
+  inflating: browser/assets/img/applicant-icon1.png
+  inflating: browser/assets/img/background-login.jpg
+  inflating: browser/assets/img/camera.png
+  inflating: browser/assets/img/card-yacht.jpg
+  inflating: browser/assets/img/chart1.png
+  inflating: browser/assets/img/chart2.png
+  inflating: browser/assets/img/chart3.png
+  inflating: browser/assets/img/collapse-icon.png
+  inflating: browser/assets/img/credit.png
+  inflating: browser/assets/img/crew-img.png
+  inflating: browser/assets/img/crew-img1.png
+  inflating: browser/assets/img/crew-members-image.png
+  inflating: browser/assets/img/crew-members1.jpeg
+  inflating: browser/assets/img/crew-members2.jpeg
+  inflating: browser/assets/img/crew-members3.jpeg
+  inflating: browser/assets/img/crew-members4.jpeg
+  inflating: browser/assets/img/crew-members5.jpeg
+  inflating: browser/assets/img/crew-members6.jpeg
+  inflating: browser/assets/img/crew-members7.jpeg
+  inflating: browser/assets/img/crew-members8.jpeg
+  inflating: browser/assets/img/crew-profile.png
+  inflating: browser/assets/img/crew.png
+  inflating: browser/assets/img/crew1.jpeg
+  inflating: browser/assets/img/crew2.jpeg
+  inflating: browser/assets/img/crew3.jpeg
+  inflating: browser/assets/img/crew4.jpeg
+  inflating: browser/assets/img/crew5.jpeg
+  inflating: browser/assets/img/crew6.jpeg
+  inflating: browser/assets/img/crew7.jpeg
+  inflating: browser/assets/img/crew8.jpeg
+  inflating: browser/assets/img/crewimg.jpg
+  inflating: browser/assets/img/dashboard-img1.jpeg
+  inflating: browser/assets/img/dashboard-img2.jpeg
+  inflating: browser/assets/img/dashboard-img3.jpeg
+  inflating: browser/assets/img/dashboard-img4.jpeg
+  inflating: browser/assets/img/docs-dummy.png
+  inflating: browser/assets/img/dollar.png
+  inflating: browser/assets/img/dropdown-icon.png
+  inflating: browser/assets/img/expand.png
+  inflating: browser/assets/img/facebook-icon.png
+  inflating: browser/assets/img/google-icon.png
+  inflating: browser/assets/img/invoice-img.png
+  inflating: browser/assets/img/invoice.png
+  inflating: browser/assets/img/job-location.png
+  inflating: browser/assets/img/job-profile-image.png
+  inflating: browser/assets/img/jobs-img.png
+  inflating: browser/assets/img/jobs-img1.jpg
+  inflating: browser/assets/img/jobs-img1.png
+  inflating: browser/assets/img/jobs-img2.jpg
+  inflating: browser/assets/img/jobs-img2.png
+  inflating: browser/assets/img/jobs-img3.png
+  inflating: browser/assets/img/jobs-img4.png
+  inflating: browser/assets/img/jobss-img.png
+  inflating: browser/assets/img/login.jpg
+  inflating: browser/assets/img/logo-old.png
+  inflating: browser/assets/img/logo.png
+  inflating: browser/assets/img/map.png
+  inflating: browser/assets/img/marina-logo.png
+  inflating: browser/assets/img/marina1.png
+  inflating: browser/assets/img/mariner.png
+  inflating: browser/assets/img/mariner2.png
+  inflating: browser/assets/img/mariner3.png
+  inflating: browser/assets/img/mariner4.png
+  inflating: browser/assets/img/nav-status.png
+  inflating: browser/assets/img/overview1.png
+  inflating: browser/assets/img/overview2.png
+  inflating: browser/assets/img/placeholder.jpg
+  inflating: browser/assets/img/planner1.jpeg
+  inflating: browser/assets/img/planner2.jpeg
+  inflating: browser/assets/img/planner3.jpeg
+  inflating: browser/assets/img/profile-img1.jpeg
+  inflating: browser/assets/img/profile-img2.jpeg
+  inflating: browser/assets/img/profile-img3.jpeg
+  inflating: browser/assets/img/profile-img4.jpeg
+  inflating: browser/assets/img/profile-img5.jpeg
+  inflating: browser/assets/img/profile-img6.jpeg
+  inflating: browser/assets/img/profile-placeholder.jpg
+  inflating: browser/assets/img/profile.png
+  inflating: browser/assets/img/second-img.png
+  inflating: browser/assets/img/service1.jpg
+  inflating: browser/assets/img/service2.jpg
+  inflating: browser/assets/img/service3.jpg
+  inflating: browser/assets/img/service4.jpg
+  inflating: browser/assets/img/signup...jpg
+  inflating: browser/assets/img/signup.jpg
+  inflating: browser/assets/img/signup1.jpg
+  inflating: browser/assets/img/support1.jpg
+  inflating: browser/assets/img/support2.jpg
+  inflating: browser/assets/img/support3.jpg
+  inflating: browser/assets/img/support4.jpg
+  inflating: browser/assets/img/twitter-icon.png
+  inflating: browser/assets/img/upload.png
+  inflating: browser/assets/img/user-placeholder.png
+  inflating: browser/assets/img/view.jpg
+  inflating: browser/assets/img/visa.png
+  inflating: browser/assets/img/websiteimg.jpg
+  inflating: browser/assets/img/yacht-cash.jpeg
+  inflating: browser/assets/img/yacht1.png
+  inflating: browser/assets/img/yacht2.png
+  inflating: browser/assets/img/yacht3.png
+   creating: browser/assets/menu-icons/
+  inflating: browser/assets/menu-icons/analytics.svg
+  inflating: browser/assets/menu-icons/bookings.svg
+  inflating: browser/assets/menu-icons/calendar.svg
+  inflating: browser/assets/menu-icons/crew.svg
+  inflating: browser/assets/menu-icons/dashboard.svg
+  inflating: browser/assets/menu-icons/finance.svg
+  inflating: browser/assets/menu-icons/settings.svg
+  inflating: browser/assets/menu-icons/yacht.svg
+  inflating: browser/chunk-33KUHHLE.js
+  inflating: browser/chunk-3YRJ2EQI.js
+  inflating: browser/chunk-442KA2ER.js
+  inflating: browser/chunk-77EH6ROJ.js
+  inflating: browser/chunk-7Z673NVA.js
+  inflating: browser/chunk-AYWO7N2Q.js
+  inflating: browser/chunk-BVLEDUP7.js
+  inflating: browser/chunk-CJZPMEIU.js
+  inflating: browser/chunk-MX64MWKJ.js
+  inflating: browser/chunk-PWFIESBA.js
+  inflating: browser/chunk-VYLNYDR5.js
+  inflating: browser/chunk-X3MJIZCU.js
+  inflating: browser/chunk-YSHTC3YG.js
+  inflating: browser/favicon.ico
+  inflating: browser/index.html
+  inflating: browser/main-FDKI7E27.js
+   creating: browser/media/
+  inflating: browser/media/dropdown-icon-2BKZ4XNB.png
+  inflating: browser/media/login-QTTUHSTS.jpg
+  inflating: browser/media/signup1-HHJF67PA.jpg
+  inflating: browser/media/websiteimg-6KZ2PNYW.jpg
+  inflating: browser/polyfills-FFHMD2TL.js
+  inflating: browser/scripts-EEEIPNC3.js
+  inflating: browser/styles-D5EBWVXX.css
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ls
+browser  browsernew.zip
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# cd browser
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb/browser# ls
+assets             chunk-AYWO7N2Q.js  chunk-X3MJIZCU.js  polyfills-FFHMD2TL.js
+chunk-33KUHHLE.js  chunk-BVLEDUP7.js  chunk-YSHTC3YG.js  scripts-EEEIPNC3.js
+chunk-3YRJ2EQI.js  chunk-CJZPMEIU.js  favicon.ico        styles-D5EBWVXX.css
+chunk-442KA2ER.js  chunk-MX64MWKJ.js  index.html
+chunk-77EH6ROJ.js  chunk-PWFIESBA.js  main-FDKI7E27.js
+chunk-7Z673NVA.js  chunk-VYLNYDR5.js  media
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb/browser# cp -r * ../
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb/browser# cd ..
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ls
+assets             chunk-77EH6ROJ.js  chunk-PWFIESBA.js  main-FDKI7E27.js
+browser            chunk-7Z673NVA.js  chunk-VYLNYDR5.js  media
+browsernew.zip     chunk-AYWO7N2Q.js  chunk-X3MJIZCU.js  polyfills-FFHMD2TL.js
+chunk-33KUHHLE.js  chunk-BVLEDUP7.js  chunk-YSHTC3YG.js  scripts-EEEIPNC3.js
+chunk-3YRJ2EQI.js  chunk-CJZPMEIU.js  favicon.ico        styles-D5EBWVXX.css
+chunk-442KA2ER.js  chunk-MX64MWKJ.js  index.html
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# rm -rf browser browsernew.zip
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ll
+total 6792
+drwxrwxrwx  4 www-data www-data    4096 Jun 28 10:27 ./
+drwxr-xr-x 14 root     root        4096 Jun 28 07:16 ../
+-rw-r--r--  1 www-data www-data     214 May 30 17:33 .htaccess
+drwxr-xr-x  5 root     root        4096 Jun 28 10:27 assets/
+-rw-r--r--  1 root     root      276595 Jun 28 10:27 chunk-33KUHHLE.js
+-rw-r--r--  1 root     root     2670590 Jun 28 10:27 chunk-3YRJ2EQI.js
+-rw-r--r--  1 root     root      209885 Jun 28 10:27 chunk-442KA2ER.js
+-rw-r--r--  1 root     root       63688 Jun 28 10:27 chunk-77EH6ROJ.js
+-rw-r--r--  1 root     root       35163 Jun 28 10:27 chunk-7Z673NVA.js
+-rw-r--r--  1 root     root      246940 Jun 28 10:27 chunk-AYWO7N2Q.js
+-rw-r--r--  1 root     root      412938 Jun 28 10:27 chunk-BVLEDUP7.js
+-rw-r--r--  1 root     root      409292 Jun 28 10:27 chunk-CJZPMEIU.js
+-rw-r--r--  1 root     root       22239 Jun 28 10:27 chunk-MX64MWKJ.js
+-rw-r--r--  1 root     root      429766 Jun 28 10:27 chunk-PWFIESBA.js
+-rw-r--r--  1 root     root        2249 Jun 28 10:27 chunk-VYLNYDR5.js
+-rw-r--r--  1 root     root      387371 Jun 28 10:27 chunk-X3MJIZCU.js
+-rw-r--r--  1 root     root      950632 Jun 28 10:27 chunk-YSHTC3YG.js
+-rw-r--r--  1 root     root       15406 Jun 28 10:27 favicon.ico
+-rw-r--r--  1 root     root       76626 Jun 28 10:27 index.html
+-rw-r--r--  1 root     root        6161 Jun 28 10:27 main-FDKI7E27.js
+drwxr-xr-x  2 root     root        4096 Jun 28 10:27 media/
+-rw-r--r--  1 root     root       34519 Jun 28 10:27 polyfills-FFHMD2TL.js
+-rw-r--r--  1 root     root       80336 Jun 28 10:27 scripts-EEEIPNC3.js
+-rw-r--r--  1 root     root      571244 Jun 28 10:27 styles-D5EBWVXX.css
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# chown -cR www-data:www-data /var/www/M                                                                                                             arinerWeb
+changed ownership of '/var/www/MarinerWeb/chunk-MX64MWKJ.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-CJZPMEIU.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-3YRJ2EQI.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/main-FDKI7E27.js' from root:root to ww                                                                                                             w-data:www-data
+changed ownership of '/var/www/MarinerWeb/scripts-EEEIPNC3.js' from root:root to                                                                                                              www-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-77EH6ROJ.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-YSHTC3YG.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/favicon.ico' from root:root to www-dat                                                                                                             a:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-33KUHHLE.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/styles-D5EBWVXX.css' from root:root to                                                                                                              www-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-BVLEDUP7.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-442KA2ER.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/polyfills-FFHMD2TL.js' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/media/signup1-HHJF67PA.jpg' from root:                                                                                                             root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/media/websiteimg-6KZ2PNYW.jpg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/media/dropdown-icon-2BKZ4XNB.png' from                                                                                                              root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/media/login-QTTUHSTS.jpg' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/media' from root:root to www-data:www-                                                                                                             data
+changed ownership of '/var/www/MarinerWeb/chunk-VYLNYDR5.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-PWFIESBA.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-7Z673NVA.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/chunk-X3MJIZCU.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons/bookings.svg' from r                                                                                                             oot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons/dashboard.svg' from                                                                                                              root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons/finance.svg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons/calendar.svg' from r                                                                                                             oot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons/yacht.svg' from root                                                                                                             :root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons/analytics.svg' from                                                                                                              root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons/settings.svg' from r                                                                                                             oot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons/crew.svg' from root:                                                                                                             root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/menu-icons' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/profile-placeholder.jpg' fr                                                                                                             om root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/profile-img1.jpeg' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members8.jpeg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/dropdown-icon.png' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/profile-img3.jpeg' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/camera.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members3.jpeg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/map.png' from root:root to                                                                                                              www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/jobs-img2.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-img1.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/second-img.png' from root:r                                                                                                             oot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/logo-old.png' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew3.jpeg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/dashboard-img2.jpeg' from r                                                                                                             oot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/ameriacan.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/websiteimg.jpg' from root:r                                                                                                             oot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/job-location.png' from root                                                                                                             :root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/jobs-img.png' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members4.jpeg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/dashboard-img1.jpeg' from r                                                                                                             oot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/chart2.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/overview1.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/profile-img6.jpeg' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/collapse-icon.png' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members2.jpeg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/dashboard-img3.jpeg' from r                                                                                                             oot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/mariner.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/google-icon.png' from root:                                                                                                             root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/logo.png' from root:root to                                                                                                              www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members-image.png' fro                                                                                                             m root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/support4.jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/support1.jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/facebook-icon.png' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew6.jpeg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/profile.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/credit.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members6.jpeg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/placeholder.jpg' from root:                                                                                                             root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew8.jpeg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/yacht1.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew2.jpeg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/marina1.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/jobs-img1.jpg' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/twitter-icon.png' from root                                                                                                             :root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/job-profile-image.png' from                                                                                                              root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew.png' from root:root to                                                                                                              www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/login.jpg' from root:root t                                                                                                             o www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/card-yacht.jpg' from root:r                                                                                                             oot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/profile-img2.jpeg' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/expand.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/jobs-img4.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members5.jpeg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew5.jpeg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/applicant-icon1.png' from r                                                                                                             oot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/yacht2.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/profile-img5.jpeg' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew4.jpeg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/service2.jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/view.jpg' from root:root to                                                                                                              www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/profile-img4.jpeg' from roo                                                                                                             t:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/invoice-img.png' from root:                                                                                                             root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/mariner4.png' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/jobs-img1.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/support3.jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/planner3.jpeg' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/overview2.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/mariner2.png' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/background-login.jpg' from                                                                                                              root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/service3.jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-img.png' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/yacht-cash.jpeg' from root:                                                                                                             root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/jobs-img3.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew1.jpeg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/signup1.jpg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/invoice.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/jobss-img.png' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/signup...jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members1.jpeg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/planner2.jpeg' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/upload.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/docs-dummy.png' from root:r                                                                                                             oot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/nav-status.png' from root:r                                                                                                             oot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/signup.jpg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/support2.jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-members7.jpeg' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew7.jpeg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/chart1.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/yacht3.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crewimg.jpg' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/jobs-img2.jpg' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/user-placeholder.png' from                                                                                                              root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/visa.png' from root:root to                                                                                                              www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/chart3.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/mariner3.png' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/planner1.jpeg' from root:ro                                                                                                             ot to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/marina-logo.png' from root:                                                                                                             root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/dashboard-img4.jpeg' from r                                                                                                             oot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/crew-profile.png' from root                                                                                                             :root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/service1.jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/service4.jpg' from root:roo                                                                                                             t to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img/dollar.png' from root:root                                                                                                              to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/img' from root:root to www-data                                                                                                             :www-data
+changed ownership of '/var/www/MarinerWeb/assets/constants/status-list.ts' from                                                                                                              root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/constants/roles.json' from root                                                                                                             :root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/constants/card-types.constants.                                                                                                             ts' from root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/constants/common-utils.ts' from                                                                                                              root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/constants/countries.ts' from ro                                                                                                             ot:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/constants/salary-type.enum.ts'                                                                                                              from root:root to www-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets/constants' from root:root to ww                                                                                                             w-data:www-data
+changed ownership of '/var/www/MarinerWeb/assets' from root:root to www-data:www                                                                                                             -data
+changed ownership of '/var/www/MarinerWeb/chunk-AYWO7N2Q.js' from root:root to w                                                                                                             ww-data:www-data
+changed ownership of '/var/www/MarinerWeb/index.html' from root:root to www-data                                                                                                             :www-data
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ls -ltr
+total 6780
+drwxr-xr-x 5 www-data www-data    4096 Jun 28 10:27 assets
+-rw-r--r-- 1 www-data www-data  276595 Jun 28 10:27 chunk-33KUHHLE.js
+-rw-r--r-- 1 www-data www-data   35163 Jun 28 10:27 chunk-7Z673NVA.js
+-rw-r--r-- 1 www-data www-data   63688 Jun 28 10:27 chunk-77EH6ROJ.js
+-rw-r--r-- 1 www-data www-data  209885 Jun 28 10:27 chunk-442KA2ER.js
+-rw-r--r-- 1 www-data www-data 2670590 Jun 28 10:27 chunk-3YRJ2EQI.js
+-rw-r--r-- 1 www-data www-data  412938 Jun 28 10:27 chunk-BVLEDUP7.js
+-rw-r--r-- 1 www-data www-data  246940 Jun 28 10:27 chunk-AYWO7N2Q.js
+-rw-r--r-- 1 www-data www-data  387371 Jun 28 10:27 chunk-X3MJIZCU.js
+-rw-r--r-- 1 www-data www-data    2249 Jun 28 10:27 chunk-VYLNYDR5.js
+-rw-r--r-- 1 www-data www-data  429766 Jun 28 10:27 chunk-PWFIESBA.js
+-rw-r--r-- 1 www-data www-data   22239 Jun 28 10:27 chunk-MX64MWKJ.js
+-rw-r--r-- 1 www-data www-data  409292 Jun 28 10:27 chunk-CJZPMEIU.js
+-rw-r--r-- 1 www-data www-data   76626 Jun 28 10:27 index.html
+-rw-r--r-- 1 www-data www-data   15406 Jun 28 10:27 favicon.ico
+-rw-r--r-- 1 www-data www-data  950632 Jun 28 10:27 chunk-YSHTC3YG.js
+-rw-r--r-- 1 www-data www-data    6161 Jun 28 10:27 main-FDKI7E27.js
+-rw-r--r-- 1 www-data www-data   80336 Jun 28 10:27 scripts-EEEIPNC3.js
+-rw-r--r-- 1 www-data www-data   34519 Jun 28 10:27 polyfills-FFHMD2TL.js
+drwxr-xr-x 2 www-data www-data    4096 Jun 28 10:27 media
+-rw-r--r-- 1 www-data www-data  571244 Jun 28 10:27 styles-D5EBWVXX.css
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# service apache2 restart
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# service apache2 status
+● apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor prese>
+     Active: active (running) since Sat 2025-06-28 10:29:05 UTC; 6s ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 595832 ExecStart=/usr/sbin/apachectl start (code=exited, status=0/>
+   Main PID: 595837 (apache2)
+      Tasks: 55 (limit: 4632)
+     Memory: 9.6M
+        CPU: 96ms
+     CGroup: /system.slice/apache2.service
+             ├─595837 /usr/sbin/apache2 -k start
+             ├─595838 /usr/sbin/apache2 -k start
+             └─595839 /usr/sbin/apache2 -k start
+
+Jun 28 10:29:05 yatchuatpR1WGZ6 systemd[1]: Starting The Apache HTTP Server...
+Jun 28 10:29:05 yatchuatpR1WGZ6 systemd[1]: Started The Apache HTTP Server.
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# history
+ 1021  git clone https://ngxptechnologies@dev.azure.com/ngxptechnologies/YM/_git/Mariner
+ 1022  ll
+ 1023  ll -ltr
+ 1024  ls -ltr
+ 1025  cd /var/www/
+ 1026  ls -lr
+ 1027  cp -r MarinerWeb MarinerWeb_June17
+ 1028  rm -rf MarinerWeb_June12 MarinerWeb_June10_1 MarinerWeb_June09
+ 1029  ls -lr
+ 1030  cd MarinerWeb
+ 1031  ls
+ 1032  rm -rf *
+ 1033  cp /home/mariner/browser_June17.zip .
+ 1034  ls
+ 1035  unzip browser_June17.zip
+ 1036  ls
+ 1037  cd browser
+ 1038  ls
+ 1039  cp -r * ../
+ 1040  cd ..
+ 1041  ls
+ 1042  rm -rf browser_June17.zip browser
+ 1043  chown -R www-data:www-data /var/www/MarinerWeb
+ 1044  systemctl restart apache2
+ 1045  c;ear
+ 1046  clear
+ 1047  cd /var/www/Mariner/Mariner.WebAPI
+ 1048  cd /var/www/BaseApi/BaseApi.WebApi
+ 1049  clear
+ 1050  cd ..
+ 1051  l
+ 1052  ls
+ 1053  cd home/mariner/
+ 1054  ls
+ 1055  clear
+ 1056  ls -a
+ 1057  mv .env /var/www/BaseApi/BaseApi.WebApi
+ 1058  ls -a
+ 1059  cd /var/www/BaseApi/BaseApi.WebApi
+ 1060  ls
+ 1061  ls -a
+ 1062  clear
+ 1063  vi .env
+ 1064  vi appsettings.json
+ 1065  vi .env
+ 1066  ls
+ 1067  clear
+ 1068  ls
+ 1069  cd ..
+ 1070  ls
+ 1071  cd BaseApi.Persistence/
+ 1072  ls
+ 1073  vi ServiceExtensions.cs
+ 1074  clear
+ 1075  git pull
+ 1076  cd ..
+ 1077  cd BaseApi.WebApi/
+ 1078  ls
+ 1079  dotnet add package DotNetEnv
+ 1080  cd ..
+ 1081  cd BaseApi.Persistence/
+ 1082  clear
+ 1083  ls
+ 1084  vi ServiceExtensions.cs
+ 1085  clear
+ 1086  ls
+ 1087  cd ..
+ 1088  cd BaseApi.WebApi/
+ 1089  ls
+ 1090  dotnet build
+ 1091  service baseapi stop
+ 1092  clear
+ 1093  service baseapi strt
+ 1094  service baseapi start
+ 1095  service baseapi status
+ 1096  cd ..
+ 1097  cd home/mariner/
+ 1098  clear
+ 1099  mv .env cd /var/www/Mariner/Mariner.WebAPI
+ 1100  mv .env  /var/www/Mariner/Mariner.WebAPI
+ 1101  mv .env /var/www/Mariner/Mariner.WebAPI
+ 1102  ls
+ 1103  ls -a
+ 1104  clear
+ 1105  ls -a
+ 1106  mv .env /var/www/Mariner/Mariner.WebAPI
+ 1107  cd /var/www/Mariner/Mariner.WebAPI
+ 1108  ls
+ 1109  ls -a
+ 1110  vi .env
+ 1111  cd ..
+ 1112  cd Mariner.Persistence/
+ 1113  ls
+ 1114  clear
+ 1115  vi ServiceExtensions.cs
+ 1116  cd ..
+ 1117  cd Mariner.WebAPI/
+ 1118  ls
+ 1119  dotnet add package DotNetEnv
+ 1120  git pull
+ 1121  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration_040 --output-dir Migrations
+ 1122  dotnet ef database update --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext
+ 1123  cd ..
+ 1124  cd Mariner.Persistence/
+ 1125  ls
+ 1126  clear
+ 1127  vi ServiceExtensions.cs
+ 1128  cd ..
+ 1129  cd Mariner.WebAPI/
+ 1130  ls
+ 1131  ls -a
+ 1132  vi .env
+ 1133  clear
+ 1134  dotnet ef database update --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext
+ 1135  service api stop
+ 1136  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1137  service api start
+ 1138  service api status
+ 1139  vi .env
+ 1140  clear
+ 1141  service api status
+ 1142  cd /var/www/BaseApi/BaseApi.WebApi
+ 1143  clear
+ 1144  dotnet publish -c Release -o /var/www/builds/BaseMariner
+ 1145  service baseapi stop
+ 1146  service baseapi start
+ 1147  service baseapi status
+ 1148  cd /var/www/Mariner/Mariner.WebAPI
+ 1149  lcear
+ 1150  clear
+ 1151  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1152  service api stop
+ 1153  service api start
+ 1154  service api status
+ 1155  clear
+ 1156  service api status
+ 1157  service api stop
+ 1158  clear
+ 1159  service api start
+ 1160  ls
+ 1161  ls -a
+ 1162  dotnet add package DotNetEnv
+ 1163  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1164  service api stop
+ 1165  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1166  clear
+ 1167  service api start
+ 1168  service api status
+ 1169  cd ..
+ 1170  cd builds/
+ 1171  ls
+ 1172  cd Mariner
+ 1173  ls
+ 1174  ls -a
+ 1175  cd ..
+ 1176  clear
+ 1177  ls
+ 1178  cd BaseMariner/
+ 1179  ls
+ 1180  ls -a
+ 1181  cd /var/www/Mariner/Mariner.WebAPI
+ 1182  clear
+ 1183  service api status
+ 1184  vi .env
+ 1185  cd ..
+ 1186  cd Mariner.Persistence/
+ 1187  dotnet add package DotNetEnv
+ 1188  cd ..
+ 1189  cd Mariner.WebAPI/
+ 1190  ls
+ 1191  clear
+ 1192  ls
+ 1193  vi Mariner.WebAPI.csproj
+ 1194  ls
+ 1195  dotnet build
+ 1196  clear
+ 1197  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1198  clear
+ 1199  service api status
+ 1200  service api stop
+ 1201  service api status
+ 1202  clear
+ 1203  service api status
+ 1204  cd /var/www/builds/Mariner
+ 1205  clear
+ 1206  ls -a
+ 1207  cd ..
+ 1208  cd BaseMariner/
+ 1209  ls
+ 1210  ls -a
+ 1211  clear
+ 1212  ls -a
+ 1213  ls
+ 1214  clear
+ 1215  cd /var/www/BaseApi/BaseApi.WebApi
+ 1216  clear
+ 1217  cp .env /var/www/builds/BaseMariner
+ 1218  cd /var/www/builds/BaseMariner
+ 1219  ls
+ 1220  ls -a
+ 1221  clear
+ 1222  cd /var/www/BaseApi/BaseApi.WebApi
+ 1223  service baseapi stop
+ 1224  service baseapi start
+ 1225  service baseapi status
+ 1226  cd logs/
+ 1227  ls
+ 1228  cd ..
+ 1229  ls
+ 1230  cd ..
+ 1231  clear
+ 1232  ls
+ 1233  cd ..
+ 1234  ls
+ 1235  cd ..
+ 1236  ls
+ 1237  cd lo
+ 1238  cd log/
+ 1239  ls
+ 1240  clear
+ 1241  ls
+ 1242  cd azure/
+ 1243  ls
+ 1244  cd ..
+ 1245  ls
+ 1246  tail -f lastlog
+ 1247  lcear
+ 1248  clear
+ 1249  ls
+ 1250  tail -f apport.log
+ 1251  cd /var/www/BaseApi/BaseApi.WebApi
+ 1252  clear
+ 1253  journalctl -u baseapi.service
+ 1254  clear
+ 1255  ls
+ 1256  journalctl -uapi.service
+ 1257  clear
+ 1258  journalctl -u api.service
+ 1259  journalctl -u baseapi.service
+ 1260  clear
+ 1261  journalctl -u baseapi.service
+ 1262  vi appsettings.json
+ 1263  service baseapi stop
+ 1264  dotnet publish -c Release -o /var/www/builds/BaseMariner
+ 1265  service baseapi start
+ 1266  service baseapi status
+ 1267  vi appsettings.json
+ 1268  celar
+ 1269  clear
+ 1270  cd ..
+ 1271  cd BaseApi.Persistence/Repository/Implementation/
+ 1272  ls
+ 1273  vi EmailService.cs cd /var/www/BaseApi/BaseApi.WebApi
+ 1274  cd /var/www/BaseApi/BaseApi.WebApi
+ 1275  clear
+ 1276  ls
+ 1277  dotnet publish -c Release -o /var/www/builds/BaseMariner
+ 1278  service baseapi stop
+ 1279  dotnet publish -c Release -o /var/www/builds/BaseMariner
+ 1280  service baseapi start
+ 1281  service baseapi status
+ 1282  cd ..
+ 1283  cd builds/
+ 1284  ls
+ 1285  cd BaseApi
+ 1286  ls
+ 1287  cd logs/
+ 1288  ls
+ 1289  tail -f webapi-20250618.log
+ 1290  clear
+ 1291  cd ..
+ 1292  cd /var/www/BaseApi/BaseApi.WebApi
+ 1293  clear
+ 1294  cp .env /var/www/builds/BaseApi
+ 1295  clear
+ 1296  service baseapi stop
+ 1297  dotnet publish -c Release -o /var/www/builds/BaseApi
+ 1298  service baseapi start
+ 1299  service baseapi status
+ 1300  tail -f /var/www/builds/BaseApi/logs/webapi-20250618.log
+ 1301  cd /var/www/Mariner
+ 1302  ls
+ 1303  cd Mariner.WebAPI
+ 1304  ls
+ 1305  ls -a
+ 1306  vi .env
+ 1307  vi /etc/systemd/system/api.service
+ 1308  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1309  cat /etc/systemd/system/api.service
+ 1310  cd /var/www/builds/Mariner/
+ 1311  /usr/bin/dotnet /var/www/builds/Mariner/Mariner.WebAPI.dll
+ 1312  cd -
+ 1313  vi .env
+ 1314  vi /var/www/Mariner/Mariner.WebAPI/Program.cs
+ 1315  vi .env
+ 1316  vi /var/www/Mariner/Mariner.WebAPI/Program.cs
+ 1317  dotnet build
+ 1318  cd /var/www/builds/
+ 1319  ls
+ 1320  cd Mariner
+ 1321  ls
+ 1322  dotnet Mariner.WebAPI.dll
+ 1323  dotnet add package DotNetEnv
+ 1324  cd -
+ 1325  cd /var/www/Mariner/Mariner.WebAPI/
+ 1326  ls
+ 1327  dotnet add package DotNetEnv
+ 1328  vi /var/www/Mariner/Mariner.WebAPI/Program.cs
+ 1329  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1330  dotnet /var/www/Mariner/Mariner.WebAPI/bin/Release/net8.0/Mariner.WebAPI.dll
+ 1331  cd /var/www/builds/Mariner/
+ 1332  ls
+ 1333  dotnet Mariner.WebAPI.dll
+ 1334  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1335  cd -
+ 1336  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1337  dotnet /var/www/Mariner/Mariner.WebAPI/bin/Release/net8.0/Mariner.WebAPI.dll
+ 1338  cd /var/www/builds/Mariner/
+ 1339  dotnet Mariner.WebAPI.dll
+ 1340  ls
+ 1341  cp -r wwwroot /tmp/
+ 1342  cd /tmp/
+ 1343  ls -ltr
+ 1344  cd -
+ 1345  ls
+ 1346  rm -rf *
+ 1347  cd /var/www/Mariner/Mariner.WebAPI/
+ 1348  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1349  ls
+ 1350  cp -r /tmp/wwwroot .
+ 1351  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1352  mkdir -p /var/www/builds/Mariner/wwwroot/uploads/vessels/MAERSK/
+ 1353  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1354  dotnet /var/www/Mariner/Mariner.WebAPI/bin/Release/net8.0/Mariner.WebAPI.dll
+ 1355  cd /var/www/builds/Mariner/
+ 1356  dotnet Mariner.WebAPI.dll
+ 1357  ls
+ 1358  cp /var/www/Mariner/Mariner.WebAPI/.env .
+ 1359  dotnet Mariner.WebAPI.dll
+ 1360  service api status
+ 1361  service api restart
+ 1362  systemctl daemon-reload
+ 1363  service api status
+ 1364  cd /home/mariner/
+ 1365  ls -ltr
+ 1366  cd /var/www/
+ 1367  ls -ltr
+ 1368  cp -r MarinerWeb MarinerWeb_June18
+ 1369  rm -rf MarinerWeb_June10 MarinerWeb_13
+ 1370  cp /home/mariner/browser_June18.zip /var/www/MarinerWeb
+ 1371  cd /var/www/MarinerWeb
+ 1372  ls
+ 1373  rm -rf *
+ 1374  cp /home/mariner/browser_June18.zip /var/www/MarinerWeb
+ 1375  ls
+ 1376  unzip browser_June18.zip
+ 1377  ls
+ 1378  cd browser
+ 1379  ls
+ 1380  cp -r * ../
+ 1381  ls
+ 1382  cd ..
+ 1383  ls
+ 1384  rm -rf browser browser_June18.zip
+ 1385  systemctl restart apache2
+ 1386  journalctl -u api.service
+ 1387  journalctl -b
+ 1388  journalctl -u api.service
+ 1389  ls
+ 1390  cd /var/www/builds/
+ 1391  ls
+ 1392  vi /etc/systemd/system/baseapi.service
+ 1393  cd /etc/apache2/sites-available/
+ 1394  ls
+ 1395  ls -ltr
+ 1396  cat MarinerWeb.conf
+ 1397  q
+ 1398  ls | grep ssl
+ 1399  cat BaseApi.conf
+ 1400  cp BaseApi.conf BaseApi_UAT.conf
+ 1401  vi BaseApi_UAT.conf
+ 1402  ping baseapi.marineryachtpal.com
+ 1403  vi MarinerApi.conf
+ 1404  cp MarinerApi.conf MarinerApi_UAT.conf
+ 1405  vi MarinerApi_UAT.conf
+ 1406  ping api.marineryachtpal.com
+ 1407  ls | grep ssl
+ 1408  cp MarinerWeb.conf MarinerWeb_UAT.conf
+ 1409  vi MarinerWeb_UAT.conf
+ 1410  ping marineryachtpal.com
+ 1411  systemctl restart apache2
+ 1412  ls -ltr
+ 1413  a2ensite BaseApi_UAT.conf
+ 1414  a2ensite MarinerApi_UAT.conf
+ 1415  a2ensite MarinerWeb_UAT.conf
+ 1416  systemctl reload apache2
+ 1417  certbot --apache
+ 1418  systemctl restart apache2
+ 1419  cd /var/www/
+ 1420  ls
+ 1421  git clone https://github.com/mishelshaji/tripify-server.git
+ 1422  ls
+ 1423  cd tripify-server/
+ 1424  ls
+ 1425  git branch
+ 1426  git checkout dev
+ 1427  ls
+ 1428  cd Benzy.Tripify/
+ 1429  ls
+ 1430  cd Benzy.Tripify.WebApi
+ 1431  ls
+ 1432  vi appsettings.json
+ 1433  ping 88.99.225.73
+ 1434  vi appsettings.json
+ 1435  mkdir -p /var/www/builds/tripfy
+ 1436  dotnet publish -c Release -o /var/www/builds/tripfy
+ 1437  cd /var/www/builds/tripfy/
+ 1438  ls
+ 1439  dotnet Benzy.Tripify.WebApi.dll
+ 1440  cp /etc/systemd/system/baseapi.service /etc/systemd/system/tripify.service
+ 1441  vi /etc/systemd/system/tripify.service
+ 1442  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5001
+ 1443  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5002
+ 1444  cd
+ 1445  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5002
+ 1446  netstat -anlp | grep 5002
+ 1447  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5002
+ 1448  cd -
+ 1449  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5002
+ 1450  vi /etc/systemd/system/tripify.service
+ 1451  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5001
+ 1452  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5000
+ 1453  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5001
+ 1454  /usr/bin/dotnet /var/www/builds/tripfy/Benzy.Tripify.WebApi.dll --urls=http://localhost:5002
+ 1455  vi /etc/systemd/system/tripify.service
+ 1456  sudo systemctl daemon-reexec
+ 1457  sudo systemctl daemon-reload
+ 1458  sudo systemctl start tripify
+ 1459  systemctl status tripify.service
+ 1460  sudo systemctl enable tripify
+ 1461  systemctl status tripify
+ 1462  systemctl start tripify
+ 1463  systemctl status tripify.service
+ 1464  vi /etc/systemd/system/tripify.service
+ 1465  sudo systemctl daemon-reexec
+ 1466  sudo systemctl daemon-reload
+ 1467  journalctl -u tripify.service
+ 1468  vi /etc/systemd/system/tripify.service
+ 1469  systemctl start tripify
+ 1470  journalctl -u tripify.service
+ 1471  vi /etc/systemd/system/tripify.service
+ 1472  systemctl start tripify
+ 1473  vi /etc/systemd/system/tripify.service
+ 1474  journalctl -u tripify.service
+ 1475  vi /etc/systemd/system/tripify.service
+ 1476  sudo systemctl daemon-reexec
+ 1477  sudo systemctl daemon-reload
+ 1478  sudo systemctl start tripify
+ 1479  journalctl -xeu tripify.service
+ 1480  vi /etc/systemd/system/tripify.service
+ 1481  cd /var/www/tripify-server/Benzy.Tripify/Benzy.Tripify.WebApi
+ 1482  ls
+ 1483  dotnet publish -c Release -o /var/www/builds/tripfy
+ 1484  vi /etc/systemd/system/tripify.service
+ 1485  sudo systemctl daemon-reexec
+ 1486  sudo systemctl daemon-reload
+ 1487  sudo systemctl start tripify
+ 1488  sudo systemctl status tripify
+ 1489  ifconfig
+ 1490  cd /etc/apache2/sites-available/
+ 1491  ls
+ 1492  cp MarinerApi.conf Tripify.conf
+ 1493  vi Tripify.conf
+ 1494  netstat -anlp | grep 5002
+ 1495  netstat -anlp | grep 5001
+ 1496  ls -ltr
+ 1497  a2ensite Tripify.conf
+ 1498  systemctl reload apache2
+ 1499  certbot --apache
+ 1500  systemctl reload apache2
+ 1501  netstat -anlp | grep 5002
+ 1502  sudo systemctl status tripify
+ 1503  curl http://localhost:5002
+ 1504  curl http://localhost:5002/swagger/index.html
+ 1505  curl http://localhost:5002/api/airport?city=kochi
+ 1506  cd /var/www/
+ 1507  ls -ltr
+ 1508  cp -r MarinerWeb MarinerWeb_June19
+ 1509  rm -rf MarinerWeb_June17
+ 1510  cd MarinerWeb
+ 1511  ls
+ 1512  rm -rf *
+ 1513  ls
+ 1514  ls -a
+ 1515  cd /home/mariner/
+ 1516  ls -ltr
+ 1517  cp browser_June19.zip /var/www/MarinerWeb
+ 1518  cd /var/www/MarinerWeb
+ 1519  ls
+ 1520  unzip browser_June19.zip
+ 1521  ls
+ 1522  cd browser
+ 1523  ls
+ 1524  cp -r * ../
+ 1525  ls
+ 1526  cd ..
+ 1527  ls
+ 1528  rm -rf browser_June19.zip browser
+ 1529  ls
+ 1530  chown -R www-data:www-data /var/www/MarinerWeb
+ 1531  systemctl restart apache2
+ 1532  cd /var/www/BaseApi/BaseApi.WebApi
+ 1533  git pull
+ 1534  service baseapi stop
+ 1535  dotnet publish -c Release -o /var/www/builds/BaseApi/
+ 1536  service baseapi start
+ 1537  service baseapi status
+ 1538  cd /var/www/Mariner/Mariner.WebAPI
+ 1539  clear
+ 1540  git pull
+ 1541  service api stop
+ 1542  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1543  service api start
+ 1544  service api status
+ 1545  cd /etc/apache2/sites-available/
+ 1546  ls
+ 1547  vi BaseApi_UAT-le-ssl.conf
+ 1548  vi MarinerApi_UAT-le-ssl.conf
+ 1549  vi /etc/systemd/system/baseapi.service
+ 1550  vi /etc/systemd/system/api.service
+ 1551  ls -ltr
+ 1552  cd /var/www/
+ 1553  ls -ltr
+ 1554  cp -r MarinerWeb MarinerWeb_June23
+ 1555  cd MarinerWeb
+ 1556  ls
+ 1557  rm -rf *
+ 1558  cp /home/mariner/browser_June23.zip .
+ 1559  ls
+ 1560  unzip browser_June23.zip
+ 1561  ls
+ 1562  cd browser
+ 1563  ls
+ 1564  cp -r * ../
+ 1565  cd ..
+ 1566  ls
+ 1567  rm -rf browser browser_June23.zip
+ 1568  chown -R www-data:www-data /var/www/MarinerWeb
+ 1569  systemctl restart apache2
+ 1570  cd /var/www/BaseApi/
+ 1571  dotnet sonarscanner begin   /o:"ngxptechnologies"   /k:"ngxptechnologies_BaseApi"   /d:sonar.host.url="https://sonarcloud.io"   /d:sonar.token="fb129798420504e4097fb4d186b95688fe7b4a53"
+ 1572  cd BaseApi.WebApi/
+ 1573  dotnet sonarscanner begin   /o:"ngxptechnologies"   /k:"ngxptechnologies_BaseApi"   /d:sonar.host.url="https://sonarcloud.io"   /d:sonar.token="fb129798420504e4097fb4d186b95688fe7b4a53"
+ 1574  ls
+ 1575  cd /var/www/Mariner/
+ 1576  ls
+ 1577  cd Mariner.WebAPI/
+ 1578  ls
+ 1579  cd /var/www/BaseApi/BaseApi.WebApi/
+ 1580  pwd
+ 1581  history
+ 1582  cd ..
+ 1583  ls
+ 1584  dotnet sonarscanner begin   /o:"ngxptechnologies"   /k:"ngxptechnologies_BaseApi"   /d:sonar.host.url="https://sonarcloud.io"   /d:sonar.token="fb129798420504e4097fb4d186b95688fe7b4a53"
+ 1585  dotnet sonarscanner begin   /o:"ngxptechnologies"   /k:"ngxptechnologies_BaseApi"   /d:sonar.host.url="https://sonarcloud.io"   /d:sonar.token="e81176266a78c5e33e99624051e7a335ce86566f"
+ 1586  cd BaseApi.WebApi/
+ 1587  dotnet sonarscanner begin   /o:"ngxptechnologies"   /k:"ngxptechnologies_BaseApi"   /d:sonar.host.url="https://sonarcloud.io"   /d:sonar.token="e81176266a78c5e33e99624051e7a335ce86566f"
+ 1588  dotnet tool install --global dotnet-sonarscanner
+ 1589  dotnet sonarscanner begin  /o:"ngxptechnologies" /k:"ngxptechnologies_BaseApi"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.token="e81176266a78c5e33e99624051e7a335ce86566f"
+ 1590  cd -
+ 1591  dotnet sonarscanner begin  /o:"ngxptechnologies" /k:"ngxptechnologies_BaseApi"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.token="e81176266a78c5e33e99624051e7a335ce86566f"
+ 1592  dotnet
+ 1593  dotnet sonarscanner
+ 1594  locate sonarscanner
+ 1595  dotnet tool install --global dotnet-sonarscanner
+ 1596  dotnet-sonarscanner
+ 1597  dotnet-sonarscanne
+ 1598  dotnet-sonarscanner
+ 1599  which sonar-scanner
+ 1600  cd /var/www/builds/BaseApi
+ 1601  dotnet sonarscanner begin  /o:"ngxptechnologies" /k:"ngxptechnologies_BaseApi"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.token="e81176266a78c5e33e99624051e7a335ce86566f"
+ 1602  dotnet build
+ 1603  cd /var/www/BaseApi/BaseApi.WebApi/
+ 1604  ls
+ 1605  dotnet build
+ 1606  dotnet tool install --global dotnet-sonarscanner
+ 1607  dotnet-sonarscanner
+ 1608  dotnet sonarscanner begin
+ 1609  dotnet sonarscanner --version
+ 1610  dotnet --info
+ 1611  export PATH="$PATH:~/.dotnet/tools"
+ 1612  dotnet sonarscanner --version
+ 1613  dotnet sonarscanner begin  /o:"ngxptechnologies" /k:"ngxptechnologies_BaseApi"  /d:sonar.host.url="https://sonarcloud.io" /d:sonar.token="e81176266a78c5e33e99624051e7a335ce86566f"
+ 1614  dotnet build
+ 1615  dotnet sonarscanner end /d:sonar.token="e81176266a78c5e33e99624051e7a335ce86566f"
+ 1616  cd /var/www/Mariner/Mariner.WebAPI/
+ 1617  dotnet sonarscanner begin   /o:"ngxptechnologies"   /k:"ngxptechnologies_Mariner"   /d:sonar.host.url="https://sonarcloud.io"   /d:sonar.token="d8e1462825c2292280b337bf305437d0f5c65531"
+ 1618  dotnet build
+ 1619  dotnet sonarscanner end /d:sonar.token="d8e1462825c2292280b337bf305437d0f5c65531"
+ 1620  cd /var/www/builds/BaseApi/
+ 1621  ls
+ 1622  clear
+ 1623  cd logs/
+ 1624  ls
+ 1625  tail -f webapi-20250624.log
+ 1626  clear
+ 1627  tail -f webapi-20250624.log
+ 1628  cd ..
+ 1629  ls
+ 1630  clear
+ 1631  ls
+ 1632  ls -a
+ 1633  vi .env
+ 1634  cd logs/
+ 1635  clear
+ 1636  tail -f webapi-20250624.log
+ 1637  cd /var/www/BaseApi/BaseApi.WebApi
+ 1638  clear
+ 1639  cd ..
+ 1640  cd home/mariner/
+ 1641  ls
+ 1642  ls -a
+ 1643  mv .env /var/www/BaseApi/BaseApi.WebApi
+ 1644  cd /var/www/BaseApi/BaseApi.WebApi
+ 1645  ls
+ 1646  clear
+ 1647  ls
+ 1648  ls -a
+ 1649  git pull
+ 1650  git status
+ 1651  git diff ../BaseApi.Persistence/ServiceExtensions.cs
+ 1652  clear
+ 1653  git status
+ 1654  git stash push ../BaseApi.Persistence/ServiceExtensions.cs
+ 1655  git pull
+ 1656  clear
+ 1657  ls
+ 1658  cd ..
+ 1659  cd BaseApi.Persistence/
+ 1660  ls
+ 1661  vi ServiceExtensions.cs
+ 1662  clear
+ 1663  cd /var/www/BaseApi/BaseApi.WebApi
+ 1664  service baseapi stop
+ 1665  dotnet publish -c Release -o /var/www/builds/BaseApi/
+ 1666  ls
+ 1667  ls -a
+ 1668  c;ear
+ 1669  clear
+ 1670  ls
+ 1671  ls -a
+ 1672  cp .env /var/www/builds/BaseApi
+ 1673  clear
+ 1674  service baseapi start
+ 1675  service baseapi status
+ 1676  dotnet publish -c Release -o /var/www/builds/BaseApi/
+ 1677  clear
+ 1678  ls
+ 1679  service baseapi stop
+ 1680  clear
+ 1681  ls
+ 1682  service baseapi start
+ 1683  service baseapi status
+ 1684  clear
+ 1685  service baseapi status
+ 1686  ls
+ 1687  service baseapi status
+ 1688  service baseapi stop
+ 1689  clear
+ 1690  service baseapi start
+ 1691  service baseapi status
+ 1692  service baseapi stop
+ 1693  service baseapi start
+ 1694  service baseapi status
+ 1695  cd /var/www/Mariner/Mariner.WebAPI
+ 1696  clear
+ 1697  git pull
+ 1698  service api stop
+ 1699  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1700  service api start
+ 1701  service api status
+ 1702  pwd
+ 1703  ls -ltr
+ 1704  cd /var/www/
+ 1705  ls -ltr
+ 1706  rm -rf MarinerWeb_June18
+ 1707  cp -r MarinerWeb MarinerWeb_June24
+ 1708  cd MarinerWeb_June24
+ 1709  ls
+ 1710  cd -
+ 1711  cd MarinerWeb
+ 1712  ls
+ 1713  rm -rf *
+ 1714  ls
+ 1715  cp /home/mariner/browser_June24.zip .
+ 1716  unzip browser_June24.zip
+ 1717  ls
+ 1718  cd browser
+ 1719  ls
+ 1720  cp -r * ../
+ 1721  cd ..
+ 1722  ls
+ 1723  rm -rf browser browser_June24.zip
+ 1724  chown -R www-data:www-data /var/www/MarinerWeb
+ 1725  systemctl restart apache2
+ 1726  cd /var/www/
+ 1727  ls -ltr
+ 1728  cd /etc/apache2/sites-available/
+ 1729  ls
+ 1730  cat MarinerWeb_prod.conf
+ 1731  cp MarinerWeb_prod.conf tripify_web.conf
+ 1732  vi tripify_web.conf
+ 1733  ifconfig
+ 1734  vi tripify_web.conf
+ 1735  mkdir -p /var/www/tripifyWeb
+ 1736  cd /var/www/tripifyWeb
+ 1737  cp /home/mariner/dist_June24.zip .
+ 1738  ls
+ 1739  unzip dist_June24.zip
+ 1740  ls
+ 1741  cd dist
+ 1742  cp -r * ../
+ 1743  cd ..
+ 1744  ls
+ 1745  cd tripify-client/
+ 1746  ls
+ 1747  cd browser/
+ 1748  ls
+ 1749  cp -r * /var/www/tripifyWeb/
+ 1750  cd ..
+ 1751  ls
+ 1752  cd ..
+ 1753  chown -R www-data:www-data /var/www/tripifyWeb
+ 1754  cd /etc/apache2/sites-available/
+ 1755  ls -ltr
+ 1756  vi tripify_web.conf
+ 1757  a2ensite tripify_web.conf
+ 1758  systemctl reload apache2
+ 1759  certbot --apache
+ 1760  systemctl reload apache2
+ 1761  ls -ltr
+ 1762  cd /var/www/tripify-server/
+ 1763  ls
+ 1764  cd Benzy.Tripify/
+ 1765  ls
+ 1766  git pull
+ 1767  ls
+ 1768  history
+ 1769  clear
+ 1770  cd /var/www/builds/Mariner
+ 1771  ;s
+ 1772  ls
+ 1773  clear
+ 1774  tail -f logs/webapi-20250625.log
+ 1775  clear
+ 1776  cd /var/www/Mariner/Mariner.WebAPI
+ 1777  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration_041 --output-dir Migrations
+ 1778  clear
+ 1779  cd /var/www/Mariner/Mariner.WebAPI
+ 1780  clear
+ 1781  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration_041 --output-dir Migrations
+ 1782  clear
+ 1783  service api stop
+ 1784  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration_041 --output-dir Migrations
+ 1785  dotnet ef database update --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext
+ 1786  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1787  service api start
+ 1788  service api stats
+ 1789  service api status
+ 1790  htop
+ 1791  cd /var/www/BaseApi/BaseApi.WebApi/
+ 1792  ls
+ 1793  vi appsettings.
+ 1794  vi appsettings.json
+ 1795  cd /var/www/builds/Mariner
+ 1796  ls
+ 1797  dotnet Mariner.WebAPI
+ 1798  dotnet Mariner.WebAPI.dll
+ 1799  ls
+ 1800  cd /var/www/BaseApi/\
+ 1801  ls
+ 1802  cd /var/www/BaseApi
+ 1803  ls
+ 1804  cd BaseApi.WebApi/
+ 1805  ls
+ 1806  vi Properties/launchSettings.json
+ 1807  vi /etc/systemd/system/baseapi.service
+ 1808  cd /etc/apache2/sites-available/
+ 1809  ls
+ 1810  vi MarinerApi_UAT.conf
+ 1811  dotnet --version
+ 1812  cd /var/www/BaseApi/BaseApi.WebApi/
+ 1813  ls
+ 1814  ls -a
+ 1815  vi .env
+ 1816  q!
+ 1817  ls -a
+ 1818  ls
+ 1819  cd ..
+ 1820  ls
+ 1821  cd BaseApi.Persistence
+ 1822  ls
+ 1823  vi BaseApi.Persistence.csproj
+ 1824  ls
+ 1825  vi BaseApi.Persistence.csproj
+ 1826  ls -a
+ 1827  cd ..
+ 1828  ls
+ 1829  cd BaseApi.WebApi/
+ 1830  ls
+ 1831  ls -a
+ 1832  netstat -anlp | grep 5002
+ 1833  netstat
+ 1834  ls
+ 1835  cd ..
+ 1836  ls
+ 1837  cd BaseApi.Persistence/
+ 1838  ls
+ 1839  dotnet ef migrations add --project ../BaseApi.Persistence/BaseApi.Persistence.csproj --startup-project ../BaseApi.WebApi/Base.API.csproj --context BaseApiContext --configuration Debug <migration_name> --output-dir Migrations
+ 1840  dotnet ef migrations add --project ../BaseApi.Persistence/BaseApi.Persistence.csproj --startup-project ../BaseApi.WebApi/Base.API.csproj --context BaseApiContext --configuration Debug first1 --output-dir Migrations
+ 1841  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration_041 --output-dir Migrations
+ 1842  cd ../BaseApi.WebApi/
+ 1843  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration_041 --output-dir Migrations
+ 1844  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug mig1 --output-dir Migrations
+ 1845  cd /var/www/Mariner/Mariner.WebAPI/
+ 1846  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migr1 --output-dir Migrations
+ 1847  ls
+ 1848  dotnet ef
+ 1849  pwd
+ 1850  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration1 --output-dir Migrations
+ 1851  dotnet-ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration1 --output-dir Migrations
+ 1852  dotnet ef migrations add --project ../Mariner.Persistence/Mariner.Persistence.csproj --startup-project ../Mariner.WebAPI/Mariner.WebAPI.csproj --context MarinerContext --configuration Debug migration1 --output-dir Migrations
+ 1853  vi /etc/systemd/system/baseapi.service
+ 1854  cd ..
+ 1855  cd ../BaseApi/BaseApi.WebApi/
+ 1856  ls
+ 1857  vi Base.API.csproj
+ 1858  cd /home/mariner/
+ 1859  ls -ltr
+ 1860  cd /var/www/BaseApi
+ 1861  git
+ 1862  cp /home/mariner/browser_MA.zip /var/www/BaseApi
+ 1863  cd /var/www/BaseApi
+ 1864  ls
+ 1865  git status
+ 1866  git add browser_MA.zip
+ 1867  git commit -m "Web build"
+ 1868  git config --global user.name "Vishnu.Sasi@ngxptechnologies.com"
+ 1869  git config --global user.email Vishnu.Sasi@ngxptechnologies.com
+ 1870  git commit -m "Web build"
+ 1871  git status
+ 1872  git push
+ 1873  git branch
+ 1874  git checkout master
+ 1875  git diff BaseApi.Persistence/ServiceExtensions.cs
+ 1876  cd /var/www/Mariner
+ 1877  ls
+ 1878  git branch
+ 1879  git checkout master
+ 1880  cd -
+ 1881  git branch
+ 1882  git checkout master
+ 1883  cp BaseApi.Persistence/ServiceExtensions.cs BaseApi.Persistence/ServiceExtensions_June25.cs
+ 1884  git restore BaseApi.Persistence/ServiceExtensions.cs
+ 1885  git checkout master
+ 1886  git status
+ 1887  cp /home/mariner/browser_MA.zip .
+ 1888  git status
+ 1889  git add browser_MA.zip
+ 1890  git commit -m "Web build"
+ 1891  git push
+ 1892  git pull
+ 1893  cd /var/www/
+ 1894  mkdir test
+ 1895  cd test/
+ 1896  git clone https://ngxptechnologies@dev.azure.com/ngxptechnologies/YM/_git/BaseApi
+ 1897  cp /home/mariner/browser_MA.zip .
+ 1898  ls
+ 1899  cd browser_MA.zip BaseApi/
+ 1900  lks
+ 1901  ls
+ 1902  git status
+ 1903  cd BaseApi/
+ 1904  lks
+ 1905  ls
+ 1906  cp ../browser_MA.zip .
+ 1907  git status
+ 1908  git add browser_MA.zip
+ 1909  git commit -m "Web"
+ 1910  git push
+ 1911  cd /var/www/MarinerWeb
+ 1912  ls
+ 1913  ls -a
+ 1914  vi .htaccess
+ 1915  vi /etc/systemd/system/baseapi.service
+ 1916  cd /var/www/BaseApi/BaseApi.WebApi/
+ 1917  vi appsettings.json
+ 1918  vi /etc/systemd/system/baseapi.service
+ 1919  cd /var/www/Mariner/Mariner.WebAPI/
+ 1920  vi appsettings.json
+ 1921  vi Properties/launchSettings.json
+ 1922  vi /var/www/BaseApi/BaseApi.WebApi/Properties/launchSettings.json
+ 1923  vi /var/www/BaseApi/BaseApi.WebApi/Properties/launchSettings.json
+ 1924  vi appsettings.json
+ 1925  cd /var/www/BaseApi/BaseApi.WebApi
+ 1926  clear
+ 1927  git status
+ 1928  git diff Base.API.csproj
+ 1929  lear
+ 1930  clear
+ 1931  git pull
+ 1932  git branch
+ 1933  clear
+ 1934  cd /var/www/Mariner/Mariner.WebAPI
+ 1935  git pull
+ 1936  service api stop
+ 1937  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1938  clear
+ 1939  cd ..
+ 1940  cd Mariner.Persistence/
+ 1941  dotnet add package EFCore.BulkExtensions --version 8.1.0
+ 1942  cd /var/www/Mariner/Mariner.WebAPI
+ 1943  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1944  service api start
+ 1945  service api status
+ 1946  clear
+ 1947  service api status
+ 1948  tail -f /var/www/builds/Mariner/logs/webapi-20250628.log
+ 1949  ls -ltr
+ 1950  rm -rf browser_04.zip browser-25.zip dist.zip browser.zip browser_June12.zip UAT1-13-06-2025.zip browser_June17.zip browser_June18.zip browser_June19.zip browser_June23.zip browser_June24.zip dist_June24.zip browser_MA.zip
+ 1951  cd /var/www/
+ 1952  ls -ltr
+ 1953  cp -r MarinerWeb MarinerWeb_June28
+ 1954  rm -rf MarinerWeb_June19 MarinerWeb_June23
+ 1955  cd MarinerWeb
+ 1956  ls
+ 1957  rm -rf *
+ 1958  cp /home/mariner/browser_28.zip .
+ 1959  ls
+ 1960  unzip browser_28.zip
+ 1961  ls
+ 1962  cd browser
+ 1963  ls
+ 1964  cp -r * ../
+ 1965  cd ..
+ 1966  ls
+ 1967  rm -rf browser_28.zip browser
+ 1968  chown -R www-data:www-data /var/www/MarinerWeb
+ 1969  systemctl restart apache2
+ 1970  cp -r MarinerWeb MarinerWeb_June28_1
+ 1971  ls -ltr
+ 1972  cd MarinerWeb
+ 1973  ls
+ 1974  rm -rf *
+ 1975  ls -a
+ 1976  cp /home/mariner/browser_28_1.zip .
+ 1977  ls
+ 1978  unzip browser_28_1.zip
+ 1979  ls -ltr
+ 1980  cd browser
+ 1981  ls
+ 1982  cp -r ../
+ 1983  cp -r * ../
+ 1984  cd ..
+ 1985  ls
+ 1986  rm -rf browser browser_28_1.zip
+ 1987  ll
+ 1988  chown -R www-data:www-data /var/www/MarinerWeb
+ 1989  ll
+ 1990  clear
+ 1991  cd /var/www/Mariner/Mariner.WebAPI
+ 1992  git pull
+ 1993  service api stop
+ 1994  dotnet publish -c Release -o /var/www/builds/Mariner
+ 1995  service api start
+ 1996  service api status
+ 1997  ls
+ 1998  clear
+ 1999  tail -f /var/www/builds/Mariner/logs/webapi-20250628.log
+ 2000  cd MarinerWeb
+ 2001  ls
+ 2002  rm -rf *
+ 2003  ls
+ 2004  ls -a
+ 2005  cp /home/mariner/browsernew.zip .
+ 2006  ls
+ 2007  unzip browsernew.zip
+ 2008  ls
+ 2009  cd browser
+ 2010  ls
+ 2011  cp -r * ../
+ 2012  cd ..
+ 2013  ls
+ 2014  rm -rf browser browsernew.zip
+ 2015  ll
+ 2016  chown -cR www-data:www-data /var/www/MarinerWeb
+ 2017  ls -ltr
+ 2018  service apache2 restart
+ 2019  service apache2 status
+ 2020  history
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb# ^C
+root@yatchuatpR1WGZ6:/var/www/MarinerWeb#

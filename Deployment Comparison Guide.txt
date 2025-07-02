@@ -1,0 +1,90 @@
+ Deployment Comparison Guide
+Project: mariner-web-deploy
+Author: Cydez
+
+
+ Manual Apache Deployment (Without Docker)
+Environment Setup:
+- Installed Apache on Windows using XAMPP or standalone binary
+- Configured httpd.conf to listen on port 8080
+- Served files from C:/xampp/htdocs/
+Steps:
+- Set Listen 8080 in httpd.conf
+- Placed frontend files (e.g. browser/) inside htdocs/
+- Restarted Apache manually via XAMPP control panel or terminal
+- Accessed the site at http://localhost:8080
+Git Integration (Manual):
+git clone https://github.com/Athul-mj/mariner-web-deploy.git
+xcopy browser\* C:\xampp\htdocs\
+
+============================================================================================================================================================================================
+
+ Docker + Jenkins CI/CD Deployment
+Environment Setup:
+
+- Used Dockerfile with base image httpd:2.4
+- Set up Jenkins with a declarative Jenkinsfile
+- Hosted the container on port 9090
+Steps:
+- Wrote a Dockerfile:FROM httpd:2.4
+COPY browser/ /usr/local/apache2/htdocs/
+
+- Created Jenkinsfile:
+
+pipeline {
+  agent any
+  stages {
+    stage('Checkout') {
+      steps {
+        git url: 'https://github.com/Athul-mj/mariner-web-deploy.git', branch: 'main'
+      }
+    }
+    stage('Build Docker Image') {
+      steps {
+        script {
+          def image = "mariner-web:${env.BUILD_NUMBER}"
+          bat "docker build -t ${image} ."
+        }
+      }
+    }
+    stage('Remove Old Container') {
+      steps {
+        bat "docker rm -f mariner-web || exit 0"
+      }
+    }
+    stage('Run New Container') {
+      steps {
+        script {
+          def image = "mariner-web:${env.BUILD_NUMBER}"
+          bat "docker run -d --name mariner-web -p 9090:80 ${image}"
+        }
+      }
+    }
+  }
+}
+- Committed and pushed to GitHub:
+git add .
+git commit -m "Add Docker + Jenkins deployment"
+git push origin main
+
+
+Jenkins detected the push, triggered the build, and launched your container
+
+- Accessed the app at http://localhost:9090
+
+
+
+ Key Differences Summary
+- You used port 8080 previously with native Apache; now you're using port 9090 via Docker
+- The old flow involved manual file copy and server restarts; now it’s fully automated with each commit
+- Jenkins + Docker makes the environment reproducible, portable, and easy to scale
+
+
+
+
+
+
+
+
+
+
